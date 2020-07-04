@@ -1,0 +1,44 @@
+Icones
+	https://icons8.com/ouch/subject/waiting-1
+	https://iconscout.com/unicons
+	-- https://www.flaticon.com/
+	https://icons8.com.br/
+	https://iconmonstr.com/
+	https://feathericons.com/
+	https://material.io/resources/icons/?style=baseline
+
+Cores
+
+	https://flatuicolors.com/
+	https://color.adobe.com/
+	https://coolors.co/
+
+
+Fontes
+
+
+	https://www.modularscale.com/
+	http://wordmark.it/#
+	https://www.dafont.com/pt/
+	https://www.1001fonts.com/
+	https://www.fontsquirrel.com/
+	https://fontpair.co/
+	https://fontjoy.com/
+
+Ilustrações
+	https://undraw.co/illustrations
+	https://www.drawkit.io/peach
+
+
+Imagens
+	
+	https://pixabay.com/pt/
+	https://www.pexels.com/pt-br/
+	https://unsplash.com/
+
+
+Animação CSS
+	https://animista.net/play/entrances/roll-in
+
+Design CSS
+	https://material.io/design/layout/pixel-density.html#pixel-density-on-ios

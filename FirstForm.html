@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Form</title>
+</head>
+<body>
+<h1>Register</h1>
+<form>
+	<div>
+		<label for="firstname">First Name:</label>
+		<input id="firstname" type="text" name="firstname"/ required>
+		<label for="lastname">First Name:</label>
+		<input id="lastname" type="text" name="lastename"/ required>
+	</div>
+	
+	<div>
+		<label for="sexm">Male:</label>
+		<input type="radio" id="sexm" value="male" name="sex">
+		<label for="sexf">Female:</label>
+		<input type="radio" id="sexf" value="female" name="sex">
+	</div>
+	
+	<div>
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required>
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" required minlength="5" maxlength="10">
+	</div>
+
+		<label for="day">Birthday:</label>
+		<select id="day" name="birthday-day>
+			<option value="">Day</option> 
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select id="month" name="birthday-month">
+			<option value="">Month</option>
+			<option value="Jan">January</option>
+			<option value="Feb">February</option>
+			<option value="Mar">March</option>
+			<option value="Apr">April</option>
+			<option value="May">may</option>
+		</select>
+		<select id="year" name="birthday-year">
+			<option value="2000">2000</option>
+			<option value="20001">2001</option>
+			<option value="2002">2002</option>
+			<option value="2003">2003</option>
+			<option value="2004">2004</option>
+			<option value="2005">2005</option>
+
+		</select>
+	<div>
+    	<label for="checkbox">I agree to the terms and conditions </label>
+   	 	<input type="checkbox" id="checkbox" name="checkbox" required/>
+  	</div>
+<input type="submit" value="submit">
+</form>
+
+</body>
+</html>
