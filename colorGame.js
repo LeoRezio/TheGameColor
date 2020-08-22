@@ -19,11 +19,15 @@ for (i = 0; i < modeButtons.length; i++) {
         // A linha de comando de cima faz exatamente a mesma coisa que o If abaixo.
          if (this.textContent == "Easy") {
              numSquares = 3;
+             score = 0;
          } else if(this.textContent == "Hard") {
              numSquares = 6;
+             score = 0;
          } else {
              numSquares = 9;
+             score = 0;
          }
+         scoreDisplay.textContent = score;
         reset();
     });
 }
@@ -34,6 +38,7 @@ resetButton.addEventListener("click", function () {
 colorDisplay.textContent = pickedColor;
 scoreDisplay.textContent = score;
 for (i = 0; i < colors.length; i++) {
+    squares[i].style.display = "block";
     squares[i].style.backgroundColor = colors[i];
     squares[i].addEventListener("click", function () {
         var clickedColor = this.style.backgroundColor;
@@ -54,7 +59,7 @@ for (i = 0; i < colors.length; i++) {
 }
 function changeColors(color) {
     for (i = 0; i < squares.length; i++) {
-        squares[i].style.backgroundColor = color;
+        squares[i].style.display = "none";
     }
 }
 function pickColor() {
