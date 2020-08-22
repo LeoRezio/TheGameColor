@@ -1,4 +1,4 @@
-var numSquares = 6;
+var numSquares = 9;
 var colors = genarateRandomColors(numSquares);
 var colorDisplay = document.querySelector("#colorDisplay");
 var pickedColor = pickColor();
@@ -7,19 +7,23 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
-
+var scoreDisplay = document.querySelector("#score");
+var score = 0;
 for (i = 0; i < modeButtons.length; i++) {
     modeButtons[i].addEventListener("click", function () {
         modeButtons[0].classList.remove("selected");
         modeButtons[1].classList.remove("selected");
+        modeButtons[2].classList.remove("selected");
         this.classList.add("selected");
-        this.textContent == "Easy" ? numSquares = 3 : numSquares = 6;
+        //this.textContent == "Easy" ? numSquares = 3 : numSquares = 6;
         // A linha de comando de cima faz exatamente a mesma coisa que o If abaixo.
-        // if (this.textContent == "Easy") {
-        //     numSquares = 3;
-        // } else {
-        //     numSquares = 6;
-        // }
+         if (this.textContent == "Easy") {
+             numSquares = 3;
+         } else if(this.textContent == "Hard") {
+             numSquares = 6;
+         } else {
+             numSquares = 9;
+         }
         reset();
     });
 }
@@ -28,7 +32,7 @@ resetButton.addEventListener("click", function () {
 })
 
 colorDisplay.textContent = pickedColor;
-
+scoreDisplay.textContent = score;
 for (i = 0; i < colors.length; i++) {
     squares[i].style.backgroundColor = colors[i];
     squares[i].addEventListener("click", function () {
@@ -38,12 +42,14 @@ for (i = 0; i < colors.length; i++) {
             resetButton.textContent = "Play Again?";
             changeColors(clickedColor);
             h1.style.backgroundColor = clickedColor;
-
+            score++;
         }
         else {
             this.style.backgroundColor = "#232323";
             messageDisplay.textContent = "Try Again";
+            score = 0;
         }
+        scoreDisplay.textContent = score;
     })
 }
 function changeColors(color) {
